@@ -74,3 +74,30 @@ export const helper = (expression: string, low: number, high: number): boolean =
   }
   return result;
 }
+
+const operands: Map<string, string> = new Map();
+operands.set("FALSE", "f");
+operands.set("TRUE", "t");
+
+
+const operators: Map<string, string> = new Map();
+operators.set("NOT", "!");
+operators.set("OR", "|");
+
+export const stringToSymbol = (input: string) => {
+  const expressions: string[] = Array<string>();
+  const strings = input.split(" ");
+  let start: string = operators.get(strings[0]) || operators.get(strings[1]);
+  expressions.push(start);
+  for (let i = 0; i < strings.length; i++){
+    if (strings[0] !== "NOT"){
+      expressions.push(string[0])
+    }
+
+    if (not == true){
+
+    }
+  }
+
+  return expressions.join("");
+}
