@@ -22,8 +22,7 @@ const helper = (expression: string, low: number, high: number): boolean => {
 
   const operator = expression.charAt(low);
   let count = 0;
-  let result: boolean = operator === "|" ? false : true;
-
+  let result: boolean = operator !== "|";
   let previous: number = low + 2;
 
   for (let i = low; i <= high; i++) {
