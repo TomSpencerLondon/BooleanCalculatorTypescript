@@ -2,12 +2,12 @@ export const calculate = (input: string): boolean => {
   const operations = input.split(" ");
   const result = operations.map((o) => o.trim());
 
-  if (operations.length === 1){
+  if (operations.length === 1) {
     return new SimpleOperand(result[0]).toBoolean();
-  }else {
-    return new Operation(result[0], new SimpleOperand(result[1])).toBoolean()
+  } else {
+    return new Operation(result[0], new SimpleOperand(result[1])).toBoolean();
   }
-}
+};
 
 class SimpleOperand {
   private value: string;
@@ -16,12 +16,12 @@ class SimpleOperand {
   }
 
   toBoolean(): boolean {
-    if (this.value !== "TRUE" && this.value !== "FALSE"){
+    if (this.value !== "TRUE" && this.value !== "FALSE") {
       throw new Error();
     }
     return this.value === "TRUE";
   }
-};
+}
 
 class Operation {
   private value: string;
@@ -32,72 +32,59 @@ class Operation {
   }
 
   toBoolean(): boolean {
-    if (this.value === "NOT"){
+    if (this.value === "NOT") {
       return !this.operand.toBoolean();
     }
   }
-};
-
-export const parseBooleanExpression = (expression: string): boolean => {
-  return helper(expression, 0, expression.length);
 }
 
-export const helper = (expression: string, low: number, high: number): boolean => {
-  if (low === high){
-    return expression.charAt(low) != "f";
+export const parseBoolean = (expression: string): boolean => {
+  const strings = expression.split(" ");
+  for (let i = 0; i < strings.length; i++) {
+    if (strings[i] === "NOT") {
+      strings[i] = "!";
+    } else if (strings[i] === "AND") {
+      strings[i] = "&";
+    } else if (strings[i] === "OR") {
+      strings[i] = "|";
+    }
+  }
+
+  const evaluate = strings.join("");
+
+  return helper(evaluate, 0, evaluate.length);
+};
+
+const helper = (expression: string, low: number, high: number): boolean => {
+  if (low == high) {
+    return expression.charAt(low) !== "!";
   }
 
   const operator = expression.charAt(low);
   let count = 0;
-  let result: boolean = (operator === "|") ? false : true;
+  let result: boolean = operator === "|" ? false : true;
 
   let previous: number = low + 2;
-  for (let i = low + 1; i <= high; i++){
-    let c = expression.charAt(i);
-    if (c === "("){
+
+  for (let i = low; i <= high; i++) {
+    const c = expression.charAt(i);
+    if (c === "(") {
       count++;
-    }else if (c === ")"){
+    } else if (c === ")") {
       count--;
     }
 
-    if((count === 1 && c === ",") || (count === 0 && c === ")")){
-      let next: boolean = helper(expression, previous, i - 1);
+    if ((count === 1 && c === ",") || (count === 0 && c === ")")) {
+      const next: boolean = helper(expression, previous, i - 1);
       previous = i + 1;
-      if (operator === "|"){
+      if (operator === "|") {
         result = result || next;
-      }else if (operator === "&") {
+      } else if (operator === "&") {
         result = result && next;
-      }else {
+      } else {
         result = !next;
       }
     }
   }
   return result;
-}
-
-const operands: Map<string, string> = new Map();
-operands.set("FALSE", "f");
-operands.set("TRUE", "t");
-
-
-const operators: Map<string, string> = new Map();
-operators.set("NOT", "!");
-operators.set("OR", "|");
-
-export const stringToSymbol = (input: string) => {
-  const expressions: string[] = Array<string>();
-  const strings = input.split(" ");
-  let start: string = operators.get(strings[0]) || operators.get(strings[1]);
-  expressions.push(start);
-  for (let i = 0; i < strings.length; i++){
-    if (strings[0] !== "NOT"){
-      expressions.push(string[0])
-    }
-
-    if (not == true){
-
-    }
-  }
-
-  return expressions.join("");
-}
+};
