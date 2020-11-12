@@ -33,7 +33,7 @@ const helper = (expression: string, low: number, high: number): boolean => {
       count--;
     }
 
-    if ((count === 1 && c === ",") || (count === 0 && c === ")")) {
+    if (count === 1 || (count === 0 && c === ")")) {
       const next: boolean = helper(expression, previous, i - 1);
       previous = i + 1;
       if (operator === "|") {
