@@ -37,3 +37,40 @@ class Operation {
     }
   }
 };
+
+export const parseBooleanExpression = (expression: string): boolean => {
+  return helper(expression, 0, expression.length);
+}
+
+export const helper = (expression: string, low: number, high: number): boolean => {
+  if (low === high){
+    return expression.charAt(low) != "f";
+  }
+
+  const operator = expression.charAt(low);
+  let count = 0;
+  let result: boolean = (operator === "|") ? false : true;
+
+  let previous: number = low + 2;
+  for (let i = low + 1; i <= high; i++){
+    let c = expression.charAt(i);
+    if (c === "("){
+      count++;
+    }else if (c === ")"){
+      count--;
+    }
+
+    if((count === 1 && c === ",") || (count === 0 && c === ")")){
+      let next: boolean = helper(expression, previous, i - 1);
+      previous = i + 1;
+      if (operator === "|"){
+        result = result || next;
+      }else if (operator === "&") {
+        result = result && next;
+      }else {
+        result = !next;
+      }
+    }
+  }
+  return result;
+}
