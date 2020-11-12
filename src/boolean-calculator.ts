@@ -23,7 +23,7 @@ const helper = (expression: string, low: number, high: number): boolean => {
   const operator = expression.charAt(low);
   let count = 0;
   let result: boolean = operator !== "|";
-  let previous: number = low + 2;
+  let previous: number = low;
 
   for (let i = low; i <= high; i++) {
     const c = expression.charAt(i);
@@ -35,7 +35,7 @@ const helper = (expression: string, low: number, high: number): boolean => {
 
     if (count === 1 || (count === 0 && c === ")")) {
       const next: boolean = helper(expression, previous, i - 1);
-      previous = i + 1;
+      previous += 1;
       if (operator === "|") {
         result = result || next;
       } else if (operator === "&") {
