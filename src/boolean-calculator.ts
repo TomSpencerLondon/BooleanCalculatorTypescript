@@ -7,6 +7,14 @@ export const parseBoolean = (expression: string): boolean => {
       strings[i] = "&";
     } else if (strings[i] === "OR") {
       strings[i] = "|";
+    } else if (strings[i] === "TRUE") {
+      strings[i] = "T";
+    } else if (strings[i] === "FALSE") {
+      strings[i] = "F";
+    } else if (strings[i] === "(TRUE") {
+      strings[i] = "(T";
+    } else if (strings[i] === "TRUE)") {
+      strings[i] = "T)";
     }
   }
 
@@ -17,12 +25,12 @@ export const parseBoolean = (expression: string): boolean => {
 
 const helper = (expression: string, low: number, high: number): boolean => {
   if (low == high) {
-    return expression.charAt(low) !== "!";
+    return expression.charAt(low) !== "F";
   }
 
   const operator = expression.charAt(low);
   let count = 0;
-  let result: boolean = operator !== "|";
+  let result: boolean = operator === "|" ? false : true;
   let previous: number = low;
 
   for (let i = low; i <= high; i++) {
@@ -35,7 +43,7 @@ const helper = (expression: string, low: number, high: number): boolean => {
 
     if (count === 1 || (count === 0 && c === ")")) {
       const next: boolean = helper(expression, previous, i - 1);
-      previous += 1;
+      previous = i + 1;
       if (operator === "|") {
         result = result || next;
       } else if (operator === "&") {
