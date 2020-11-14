@@ -18,6 +18,10 @@ describe("Boolean Calculator", () => {
     ["TRUE AND NOT FALSE", true],
     ["FALSE AND NOT TRUE", false],
     ["FALSE AND NOT FALSE", false],
+    ["NOT TRUE AND NOT TRUE", false],
+    ["NOT TRUE AND NOT FALSE", false],
+    ["NOT FALSE AND NOT TRUE", false],
+    ["NOT FALSE AND NOT FALSE", true],
   ])("returns correct output for input", (input: string, output: boolean) => {
     expect(parseBoolean(input)).toEqual(output);
   });
