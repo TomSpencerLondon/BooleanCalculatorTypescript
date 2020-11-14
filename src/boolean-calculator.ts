@@ -6,20 +6,15 @@ export const parseBoolean = (input: string): boolean => {
   }
   const array: string[] = input.split(" ");
 
-  if (array[0] === "NOT") {
+  if (array.length === 2 && array[0] === "NOT") {
     return !parseBoolean(array.slice(1).join(" "));
   }
 
-  //
-  // const ast: any = {};
-  // const currentBranch: any = ast;
-  //
-  // for (let i = 0; i < array.length; i++) {
-  //   if (array[i] === "AND") {
-  //     currentBranch["AND"] = {
-  //       left: array[i - 1],
-  //       right: array[i + 1],
-  //     };
-  //   }
-  // }
+  if (array.some((el) => el === "AND")) {
+    const index = array.indexOf("AND");
+    return (
+      parseBoolean(array.slice(0, index).join(" ")) &&
+      parseBoolean(array.slice(index + 1).join(" "))
+    );
+  }
 };
