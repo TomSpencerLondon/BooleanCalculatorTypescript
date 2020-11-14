@@ -17,4 +17,12 @@ export const parseBoolean = (input: string): boolean => {
       parseBoolean(array.slice(index + 1).join(" "))
     );
   }
+
+  if (array.some((el) => el === "OR")) {
+    const index = array.indexOf("OR");
+    return (
+      parseBoolean(array.slice(0, index).join(" ")) ||
+      parseBoolean(array.slice(index + 1).join(" "))
+    );
+  }
 };
