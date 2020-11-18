@@ -18,13 +18,13 @@ export const parseBoolean = (expression: string): boolean => {
       }
     }
   }
-  return parseWithoutBrackets(expression);
+  return parseWithoutBrackets(expression.toUpperCase());
 };
 
 const parseWithoutBrackets = (expression: string): boolean => {
-  if (expression === "TRUE" || expression === "true") {
+  if (expression === "TRUE") {
     return true;
-  } else if (expression === "FALSE" || expression === "false") {
+  } else if (expression === "FALSE") {
     return false;
   }
   const array: string[] = expression.split(" ");
