@@ -1,4 +1,16 @@
 export const parseBoolean = (input: string): boolean => {
+  if (input.includes("(")) {
+    const output: string = input.substring(
+      input.indexOf("(") + 1,
+      input.indexOf(")")
+    );
+
+    return parseWithoutBrackets(output);
+  }
+  return parseWithoutBrackets(input);
+};
+
+export const parseWithoutBrackets = (input: string): boolean => {
   if (input === "TRUE") {
     return true;
   } else if (input === "FALSE") {
