@@ -33,7 +33,7 @@ const parseWithoutBrackets = (expression: string): boolean => {
     return !parseBoolean(tokens.slice(1).join(" "));
   }
 
-  if (tokens.some((el) => el === "OR")) {
+  if (tokens.some((token) => token === "OR")) {
     const index = tokens.indexOf("OR");
     return (
       parseBoolean(tokens.slice(0, index).join(" ")) ||
@@ -41,7 +41,7 @@ const parseWithoutBrackets = (expression: string): boolean => {
     );
   }
 
-  if (tokens.some((el) => el === "AND")) {
+  if (tokens.some((token) => token === "AND")) {
     const index = tokens.indexOf("AND");
     return (
       parseBoolean(tokens.slice(0, index).join(" ")) &&
