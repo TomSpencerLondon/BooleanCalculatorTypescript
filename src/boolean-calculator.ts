@@ -27,25 +27,25 @@ const parseWithoutBrackets = (expression: string): boolean => {
   } else if (expression === "FALSE") {
     return false;
   }
-  const array: string[] = expression.split(" ");
+  const tokens: string[] = expression.split(" ");
 
-  if (array.length === 2 && array[0] === "NOT") {
-    return !parseBoolean(array.slice(1).join(" "));
+  if (tokens.length === 2 && tokens[0] === "NOT") {
+    return !parseBoolean(tokens.slice(1).join(" "));
   }
 
-  if (array.some((el) => el === "OR")) {
-    const index = array.indexOf("OR");
+  if (tokens.some((el) => el === "OR")) {
+    const index = tokens.indexOf("OR");
     return (
-      parseBoolean(array.slice(0, index).join(" ")) ||
-      parseBoolean(array.slice(index + 1).join(" "))
+      parseBoolean(tokens.slice(0, index).join(" ")) ||
+      parseBoolean(tokens.slice(index + 1).join(" "))
     );
   }
 
-  if (array.some((el) => el === "AND")) {
-    const index = array.indexOf("AND");
+  if (tokens.some((el) => el === "AND")) {
+    const index = tokens.indexOf("AND");
     return (
-      parseBoolean(array.slice(0, index).join(" ")) &&
-      parseBoolean(array.slice(index + 1).join(" "))
+      parseBoolean(tokens.slice(0, index).join(" ")) &&
+      parseBoolean(tokens.slice(index + 1).join(" "))
     );
   }
 };
