@@ -1,8 +1,8 @@
-export const parseBoolean = (input: string): boolean => {
-  if (input.includes("(")) {
+export const parseBoolean = (expression: string): boolean => {
+  if (expression.includes("(")) {
     let count = 0;
-    for (let i = 0; i < input.length; i++) {
-      const c = input.charAt(i);
+    for (let i = 0; i < expression.length; i++) {
+      const c = expression.charAt(i);
       if (c === "(") {
         count++;
       } else if (c === ")") {
@@ -11,23 +11,23 @@ export const parseBoolean = (input: string): boolean => {
 
       if (count === 0 && c === ")") {
         return parseBoolean(
-          input.substring(0, input.indexOf("(")) +
-            parseBoolean(input.substring(input.indexOf("(") + 1, i)) +
-            input.substring(i + 1, input.length)
+          expression.substring(0, expression.indexOf("(")) +
+            parseBoolean(expression.substring(expression.indexOf("(") + 1, i)) +
+            expression.substring(i + 1, expression.length)
         );
       }
     }
   }
-  return parseWithoutBrackets(input);
+  return parseWithoutBrackets(expression);
 };
 
-const parseWithoutBrackets = (input: string): boolean => {
-  if (input === "TRUE" || input === "true") {
+const parseWithoutBrackets = (expression: string): boolean => {
+  if (expression === "TRUE" || expression === "true") {
     return true;
-  } else if (input === "FALSE" || input === "false") {
+  } else if (expression === "FALSE" || expression === "false") {
     return false;
   }
-  const array: string[] = input.split(" ");
+  const array: string[] = expression.split(" ");
 
   if (array.length === 2 && array[0] === "NOT") {
     return !parseBoolean(array.slice(1).join(" "));
