@@ -1,19 +1,30 @@
 export const parseBoolean = (input: string): boolean => {
   if (input.includes("(")) {
-    const output: string = input.substring(
-      input.indexOf("(") + 1,
-      input.indexOf(")")
-    );
+    let count = 0;
+    for (let i = 0; i < input.length; i++) {
+      const c = input.charAt(i);
+      if (c === "(") {
+        count++;
+      } else if (c === ")") {
+        count--;
+      }
 
-    return parseWithoutBrackets(output);
+      if (count === 0 && c === ")") {
+        return parseBoolean(
+          input.substring(0, input.indexOf("(")) +
+            parseBoolean(input.substring(input.indexOf("(") + 1, i)) +
+            input.substring(i + 1, input.length)
+        );
+      }
+    }
   }
   return parseWithoutBrackets(input);
 };
 
 export const parseWithoutBrackets = (input: string): boolean => {
-  if (input === "TRUE") {
+  if (input === "TRUE" || input === "true") {
     return true;
-  } else if (input === "FALSE") {
+  } else if (input === "FALSE" || input === "false") {
     return false;
   }
   const array: string[] = input.split(" ");
