@@ -21,7 +21,7 @@ export const parseBoolean = (input: string): boolean => {
   return parseWithoutBrackets(input);
 };
 
-export const parseWithoutBrackets = (input: string): boolean => {
+const parseWithoutBrackets = (input: string): boolean => {
   if (input === "TRUE" || input === "true") {
     return true;
   } else if (input === "FALSE" || input === "false") {
