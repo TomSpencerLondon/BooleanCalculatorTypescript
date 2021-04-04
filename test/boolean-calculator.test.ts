@@ -41,6 +41,11 @@ describe("Boolean Calculator", () => {
     ["TRUE AND FALSE OR TRUE", true],
     ["TRUE OR TRUE OR TRUE AND FALSE", true],
     ["TRUE OR FALSE AND NOT FALSE", true],
+    ["(TRUE)", true],
+    ["((TRUE))", true],
+    ["((TRUE AND FALSE) OR TRUE)", true],
+    ["(TRUE OR (TRUE OR ((NOT TRUE) AND FALSE)))", true],
+    ["NOT (TRUE AND TRUE)", false],
   ])("returns correct output for input", (input: string, output: boolean) => {
     expect(parseBoolean(input)).toEqual(output);
   });
