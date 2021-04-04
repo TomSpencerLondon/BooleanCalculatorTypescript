@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d9460ef5-d80a-4a02-933c-3c150160aac8" name="Default Changelist" comment="Add tests for multiple operators">
+      <change beforePath="$PROJECT_DIR$/src/boolean-calculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/boolean-calculator.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kHRfSnlow18cdylYQpcwLyaQX6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Jest.Boolean Calculator.returns correct output for input">
+    <configuration name="Boolean Calculator" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/test/boolean-calculator.test.ts" />
+      <test-names>
+        <test-name value="Boolean Calculator" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Boolean Calculator.returns correct output for input" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/boolean-calculator.test.ts" />
+      <test-names>
+        <test-name value="Boolean Calculator" />
+        <test-name value="returns correct output for input" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="boolean-calculator.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/test/boolean-calculator.test.ts" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Boolean Calculator.returns correct output for input" />
+        <item itemvalue="Jest.boolean-calculator.test.ts" />
+        <item itemvalue="Jest.Boolean Calculator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9460ef5-d80a-4a02-933c-3c150160aac8" name="Default Changelist" comment="" />
+      <created>1605355633728</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605355633728</updated>
+      <workItem from="1605355635486" duration="1536000" />
+      <workItem from="1605357399137" duration="5311000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add tests for true not true, false and not false">
+      <created>1605357709393</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605357709393</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add recursion for NOT operator">
+      <created>1605359522597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605359522597</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Passing tests for slice on array">
+      <created>1605360404226</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605360404226</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add extra tests">
+      <created>1605360540549</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605360540549</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Passing extra tests">
+      <created>1605360608114</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605360608114</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Passing tests for OR and AND">
+      <created>1605361148798</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605361148798</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add tests for multiple operators">
+      <created>1605361735850</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605361735850</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add tests for true not true, false and not false" />
+    <MESSAGE value="Add recursion for NOT operator" />
+    <MESSAGE value="Passing tests for slice on array" />
+    <MESSAGE value="Add extra tests" />
+    <MESSAGE value="Passing extra tests" />
+    <MESSAGE value="Passing tests for OR and AND" />
+    <MESSAGE value="Add tests for multiple operators" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tests for multiple operators" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="426" y="125" key="#TypeScript" timestamp="1605357184766">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="426" y="125" key="#TypeScript/0.0.1440.900@0.0.1440.900" timestamp="1605357184766" />
+    <state x="100" y="100" width="1240" height="700" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1605358262224">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1440.900@0.0.1440.900" timestamp="1605358262224" />
+    <state width="1419" height="304" key="GridCell.Tab.0.bottom" timestamp="1606043199944">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606043199944" />
+    <state width="1419" height="304" key="GridCell.Tab.0.center" timestamp="1606043199943">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606043199943" />
+    <state width="1419" height="304" key="GridCell.Tab.0.left" timestamp="1606043199943">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606043199943" />
+    <state width="1419" height="304" key="GridCell.Tab.0.right" timestamp="1606043199944">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606043199944" />
+    <state width="1419" height="304" key="GridCell.Tab.1.bottom" timestamp="1606043199946">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606043199946" />
+    <state width="1419" height="304" key="GridCell.Tab.1.center" timestamp="1606043199945">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1606043199945" />
+    <state width="1419" height="304" key="GridCell.Tab.1.left" timestamp="1606043199945">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1606043199945" />
+    <state width="1419" height="304" key="GridCell.Tab.1.right" timestamp="1606043199945">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1606043199945" />
+    <state width="1419" height="304" key="GridCell.Tab.2.bottom" timestamp="1606043199947">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606043199947" />
+    <state width="1419" height="304" key="GridCell.Tab.2.center" timestamp="1606043199947">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1606043199947" />
+    <state width="1419" height="304" key="GridCell.Tab.2.left" timestamp="1606043199946">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1606043199946" />
+    <state width="1419" height="304" key="GridCell.Tab.2.right" timestamp="1606043199947">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1606043199947" />
+    <state width="1419" height="304" key="GridCell.Tab.3.bottom" timestamp="1606043199949">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.3.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606043199949" />
+    <state width="1419" height="304" key="GridCell.Tab.3.center" timestamp="1606043199948">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.3.center/0.0.1440.900@0.0.1440.900" timestamp="1606043199948" />
+    <state width="1419" height="304" key="GridCell.Tab.3.left" timestamp="1606043199948">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.3.left/0.0.1440.900@0.0.1440.900" timestamp="1606043199948" />
+    <state width="1419" height="304" key="GridCell.Tab.3.right" timestamp="1606043199948">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="304" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1606043199948" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1605357473414">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605357473414" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605361737394">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605361737394" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1605357429821">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605357429821" />
+  </component>
+</project>
